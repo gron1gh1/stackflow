@@ -4,7 +4,7 @@ import { recipe } from "@vanilla-extract/recipes";
 
 import {
   android,
-  background,
+  appBarBackground,
   cupertino,
   enterActive,
   enterDone,
@@ -21,7 +21,7 @@ export const appBar = recipe({
     f.posAbs,
     f.flexAlignCenter,
     f.fullWidth,
-    background,
+    appBarBackground,
     {
       height: vars.appBar.height,
       paddingTop: ["constant(safe-area-inset-top)", "env(safe-area-inset-top)"],

@@ -26,6 +26,7 @@ interface AppBarProps {
   textColor?: string;
   borderColor?: string;
   height?: string;
+  backgroundColor?: string;
 }
 const AppBar: React.FC<AppBarProps> = ({
   theme,
@@ -41,6 +42,7 @@ const AppBar: React.FC<AppBarProps> = ({
   textColor,
   borderColor,
   height,
+  backgroundColor,
 }) => {
   const actions = useActions();
 
@@ -94,6 +96,7 @@ const AppBar: React.FC<AppBarProps> = ({
       })}
       style={assignInlineVars(
         compactMap({
+          [appScreenCss.vars.appBar.backgroundColor]: backgroundColor,
           [appScreenCss.vars.appBar.iconColor]: iconColor,
           [appScreenCss.vars.appBar.textColor]: textColor,
           [appScreenCss.vars.appBar.borderColor]: borderColor,

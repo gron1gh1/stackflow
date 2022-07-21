@@ -15,6 +15,7 @@ export const vars = createGlobalThemeContract(
     dimBackgroundColor: null,
     appBar: {
       height: null,
+      backgroundColor: null,
       borderColor: null,
       borderSize: null,
       textColor: null,
@@ -49,6 +50,7 @@ createGlobalTheme(`${android}, ${rootAndroid}`, vars, {
   dimBackgroundColor: "rgba(0, 0, 0, 0.15)",
   appBar: {
     height: "3.5rem",
+    backgroundColor: "#fff",
     borderColor: "rgba(0, 0, 0, 0.07)",
     borderSize: "1px",
     iconColor: "#212124",
@@ -61,6 +63,7 @@ createGlobalTheme(`${cupertino}, ${rootCupertino}`, vars, {
   dimBackgroundColor: "rgba(0, 0, 0, 0.15)",
   appBar: {
     height: "2.75rem",
+    backgroundColor: "#fff",
     borderColor: "rgba(0, 0, 0, 0.12)",
     borderSize: "0.5px",
     iconColor: "#212124",
@@ -81,6 +84,10 @@ const dimBackgroundColor = style({
 
 export const background = style({
   backgroundColor: vars.backgroundColor,
+});
+
+export const appBarBackground = style({
+  backgroundColor: vars.appBar.backgroundColor,
 });
 
 export const allTransitions = style({
